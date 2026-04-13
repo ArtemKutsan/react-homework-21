@@ -5,7 +5,9 @@ function Question({ questionId }) {
   const dispatch = useDispatch();
   const question = useSelector(
     (state) =>
-      state.questionnaire.questions.find((question) => question.id === questionId)
+      state.questionnaire.questions.find(
+        (question) => question.id === questionId
+      )
   );
   const userAnswer = useSelector(
     (state) => state.questionnaire.userAnswers[questionId]
@@ -20,20 +22,23 @@ function Question({ questionId }) {
   };
 
   return (
-    <div>
-      <p>{question.text}</p>
-      {question.answers.map((answer) => (
-        <label key={answer.id}>
-          <input
-            type="radio"
-            name={`question-${questionId}`}
-            value={answer.id}
-            checked={userAnswer === answer.id}
-            onChange={() => handleAnswerChange(answer.id)}
-          />
-          {answer.text}
-        </label>
-      ))}
+    <div className="mb-4">
+      <p className="font-semibold text-lg mb-2">{question.text}</p>
+      <div className="space-y-1">
+        {question.answers.map((answer) => (
+          <label key={answer.id} className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="radio"
+              name={`question-${questionId}`}
+              value={answer.id}
+              checked={userAnswer === answer.id}
+              onChange={() => handleAnswerChange(answer.id)}
+              className="w-4 h-4"
+            />
+            <span>{answer.text}</span>
+          </label>
+        ))}
+      </div>
     </div>
   );
 }

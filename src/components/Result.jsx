@@ -13,8 +13,8 @@ function Result() {
   }
 
   return (
-    <div>
-      <p>Your Score: {score}</p>
+    <div className="mt-6">
+      <p className="text-3xl font-bold">Your Score: {score}</p>
     </div>
   );
 }
