@@ -1,0 +1,60 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Шаблонный компонент
+src/components/Template/
+
+# Temp folder for generated code and intermediate files
+temp/
+
+# AI Agent Knowledge Base & Infrastructure
+.agent/
+docs/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+QWEN.md
+CODEX.md
+KIMI.md
+CLINE.md
+ANTHROPIC.md
+OPENAI.md
+CODY.md
+CURSOR.md
+WINDSURF.md
+IDX.md
+
+# AI Tool State & Cache
+.gemini/
+.qwen/
+.codex/
+.kimi/
+.cline/
+.anthropic/
+.openai/
+.cody/
+.cursor/
+.windsurf/
+.idx/
